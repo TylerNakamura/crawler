@@ -3,11 +3,12 @@
 # compile
 echo "Compiling"
 
-javac ./URLAnalyzer/URLAnalyzer.java -d Main/ &
+# this needs to be completed before Main
+javac ./URLAnalyzer/URLAnalyzer.java -d Bin/ &
 
 wait
 
-javac ./Main/Main.java -d Main/ &
+javac ./Main/Main.java -d Bin/ &
 
 # wait for compilations to finish
 wait
@@ -15,5 +16,5 @@ wait
 echo "Done Compiling"
 printf "\n\n\n"
 
-# run dat shit
-java -cp ./Main Main
+# run the application
+java -cp ./Bin Main -starter_urls starter_urls.txt
