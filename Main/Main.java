@@ -5,14 +5,16 @@ import URLAnalyzer.URLAnalyzer;
 class Main {
   public static void main(String[] args) {
     System.out.println("Initializing");
+
     boolean vflag = false;
     String outputfile = "";
     int i = 0;
     String arg;
     String starter_urls="starter_urls.txt";
-
     URLAnalyzer thingy = new URLAnalyzer();
 
+    // Parse Command Line Arguments
+    // Source: http://journals.ecs.soton.ac.uk/java/tutorial/java/cmdLineArgs/conventions.html
     while (i < args.length && args[i].startsWith("-")) {
           arg = args[i++];
 
